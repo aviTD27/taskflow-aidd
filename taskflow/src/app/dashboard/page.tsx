@@ -5,8 +5,8 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import { getTasks } from '@/lib/tasks';
 import { Task } from '@/types';
-// import TaskForm from '@/components/TaskForm';
-// import TaskList from '@/components/TaskList';
+import TaskForm from '@/components/TaskForm';
+import TaskList from '@/components/TaskList';
 import TaskFilters, { PriorityFilter, StatusFilter, SortOption } from '@/components/TaskFilters';
 
 export default function Dashboard() {
