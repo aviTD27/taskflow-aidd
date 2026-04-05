@@ -1,6 +1,7 @@
 // firebase.ts
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 let analytics: any = null;
 
@@ -17,10 +18,13 @@ const firebaseConfig = {
 // Prevent reinitializing during hot reload
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// Firestore instance
+// Firestore
 export const db = getFirestore(app);
 
-// Load analytics only in the browser
+// Auth
+export const auth = getAuth(app);
+
+// Analytics (browser only)
 if (typeof window !== "undefined") {
   import("firebase/analytics").then(({ getAnalytics }) => {
     analytics = getAnalytics(app);
