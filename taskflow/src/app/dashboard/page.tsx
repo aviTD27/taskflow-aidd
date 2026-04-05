@@ -90,20 +90,20 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 py-6">
+    <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 py-6 px-4 sm:px-6 lg:px-8">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-        <p className="mt-2 text-sm text-gray-500">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+        <p className="mt-2 text-sm sm:text-base text-gray-500">
           Welcome back! Here's an overview of your tasks.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-        <div className="md:col-span-1 sticky top-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="lg:col-span-4 lg:sticky lg:top-8">
           <TaskForm onTaskAdded={fetchTasks} />
         </div>
         
-        <div className="md:col-span-2">
+        <div className="lg:col-span-8">
           <TaskFilters 
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}

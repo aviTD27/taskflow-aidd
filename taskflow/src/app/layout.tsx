@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TaskFlow",
-  description: "Collaborative task management application",
+  title: "TaskFlow | Manage Your Tasks Effortlessly",
+  description: "An intuitive collaborative task management application built for productivity.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
